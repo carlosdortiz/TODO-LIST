@@ -1,3 +1,3 @@
 # TODO-LIST
 Proyecto de Ing. Informática
-Carlos Ortiz y Wuelffer Castellano.
+- Carlos Ortiz y Wuelffer Castellano.

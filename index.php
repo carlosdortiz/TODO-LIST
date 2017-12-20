@@ -1,51 +1,43 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Todo list</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Todo List</title>
 </head>
 <body>
-	<div class="heading">
-		<h2>Todo list</h2>
-	</div>
+<form action="Registro.php" method="POST">
+	Clave: <input type="text" name="txtClave"> <br/>
+	Tarea: <input type="text" name="txtTarea"> <br/>
+	<input type="submit" value="Registrar" name="btnRegistrar">
 
 
-	<form method="POST" action="index.php">   
-		<input type="text" name="task" class="task_input">
-		<button type="submit" class="add_btn" name="submit">agregar tarea</button>
-		</form>	
+</form>
+<p>..............................................................</p>
 
-		<table>
-			<thead>
-				<tr>
-					<th>N</th>
-					<th>Tarea</th>
-					<th>Accion</th>
-				</tr>
-			</thead>
+	<form action="eliminar.php" method="POST">
+		Clave:  <input type="text" name="txtClave"> <br/>
+		<input type="submit" value = "Eliminar tarea" name="btnEliminar">
+	</form>
 
-		<tbody>
-			
+	<p>..............................................................</p>
 
-<tr>
-				<td>1</td>
-				<td class="task">primera tarea</td>
-				<td class="delete">
-				    <a href="#">X</a>
-				</td>
-			</tr>
+	<form action="actualizar.php" method="POST">
+		Clave: <input type="text" name="txtClave"> <br/>
+		Tarea: <input type="text" name="txtTarea"> <br/>
+		Completado:
+			<select name="cmbCompletado">			
+				<option value="No">No</option>
+				<option value="Si">Si </option>
+			</select> <br/>
+		<input type="submit" value="Actualizar Tarea" name="btnActualizar">		
+	</form>
+<p>..............................................................</p>
 
-
-
-		
-			
-
-		</tbody>
-
-		</table>
-
+<form action = "Registros.php" >
+	<input type="submit" value="Ver Registros" name="btnRegistros">
 	
+
+</form>
+
 
 
 </body>

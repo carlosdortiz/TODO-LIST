@@ -3,7 +3,7 @@
      $errors = "";
    //aqui se conecta con la base de datos
   
-   $db = mysqli_connect('localhost','root', ' ', 'todo' );
+   $db = mysqli_connect('localhost','root','','todo');
 
    if (isset($_POST['submit'])) {
    	    $task = $_POST['task'];
@@ -19,12 +19,12 @@
 
      	}
      	//borrar tarea
-     	if (insset($_GET['del_task'])) {
+     	if (isset($_GET ['del_task'])) {
      		$id = $_GET ['del_task'];
      		mysqli_query($db, "DELETE FROM tasks WHERE id=$id");
-     		header('location: index.php'); 
-     	
-   }
+     		header('location:index.php'); 
+     	}
+
 
    $tasks = mysqli_query($db, "SELECT * FROM tasks");
 
@@ -50,7 +50,7 @@
 
 
 		<input type="text" name="task" class="task_input">
-		<button type="submit" class="add_btn" name="submit">add task</button>
+		<button type="submit" class="add_btn" name="submit">agregar tarea</button>
 		</form>	
 
 		<table>
@@ -63,7 +63,7 @@
 			</thead>
 
 		<tbody>
-			<?php $i = 1; while ($row = mysql_fetch_array($tasks)) { ?>
+			<?php $i = 1; while ($row = mysqli_fetch_array($tasks)) { ?>
 
 <tr>
 				<td><?php echo $i ; ?></td>
